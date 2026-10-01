@@ -45,6 +45,13 @@
       body {
         height: 100%;
       }
+      /* Never let a phone browser enlarge text on its own. Chrome on Android does that to pages laid
+         out wider than the window, which is what lib/minLayoutWidth.ts does to a narrow split-screen
+         window; the layout's own sizes are the ones it was checked at. */
+      html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
       /* The canvas colour before the bundle has run, so a dark device never flashes white while
          the app loads. Once it runs, the app sets these itself and follows the Appearance choice
          (ThemedChrome in app/_layout.tsx); the values mirror the theme tokens' canvas. */
@@ -74,6 +81,6 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-  <script src="/Nook/_expo/static/js/web/entry-80bd47df3a61cfa89846a35b1b332341.js" defer></script>
+  <script src="/Nook/_expo/static/js/web/entry-8878fce04c03a03c3eb756cd95d28ea5.js" defer></script>
 </body>
 </html>
