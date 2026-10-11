@@ -40,7 +40,9 @@
     <title>Cluster</title>
     <!-- Installable: "Add to Home screen" opens Cluster on its own, full screen, with no browser
          bars (manifest.webmanifest; icons from scripts/web-app-icons.mjs). The apple-* lines are
-         what iOS reads instead. -->
+         what iOS reads instead. The manifest's background_color and theme_color are the default
+         colorway's light canvas (JSON takes no comment, so it is said here), kept in step with the
+         theme by apps/app/lib/defaultColorwayCopies.test.ts. -->
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -62,8 +64,9 @@
       }
       /* The canvas colour before the bundle has run, so a dark device never flashes white while
          the app loads. Once it runs, the app sets these itself and follows the Appearance choices
-         (ThemedChrome in app/_layout.tsx); the values mirror the default colorway's canvas
-         (Sage, packages/ui/src/theme/colorways.ts). */
+         (ThemedChrome in app/_layout.tsx); the values are the default colorway's canvas, light and
+         dark (packages/ui/src/theme/colorways.ts), kept in step with it by
+         apps/app/lib/defaultColorwayCopies.test.ts. */
       html,
       body {
         background-color: #e9ebe7;
@@ -71,7 +74,7 @@
       @media (prefers-color-scheme: dark) {
         html,
         body {
-          background-color: #2a2d2b;
+          background-color: #0a120d;
         }
       }
       /* These styles disable body scrolling if you are using <ScrollView> */
@@ -90,6 +93,6 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-  <script src="/_expo/static/js/web/entry-3cf9aa252a0acfa606af45b4005212d7.js" defer></script>
+  <script src="/_expo/static/js/web/entry-6732d8a5ed502f6b932c07709072140b.js" defer></script>
 </body>
 </html>
