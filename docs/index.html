@@ -35,7 +35,10 @@
       content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.supabase.co https://*.supabase.in http://127.0.0.1:54321 http://localhost:54321; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://*.supabase.in wss://*.supabase.in http://127.0.0.1:54321 http://localhost:54321 ws://127.0.0.1:54321 ws://localhost:54321; font-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'"
     />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <!-- interactive-widget=resizes-visual: the on-screen keyboard covers the page rather than shrinking it,
+         what lib/keyboardCover.ts measures and what Chrome and Safari already do. Samsung Internet shrank the
+         page instead, so everything at its foot jumped up mid-animation as the knob's entry box opened. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover, interactive-widget=resizes-visual" />
     <meta name="color-scheme" content="light dark" />
     <title>Cluster</title>
     <!-- Installable: "Add to Home screen" opens Cluster on its own, full screen, with no browser
@@ -93,6 +96,6 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-  <script src="/_expo/static/js/web/entry-69c483511660fb3d32e36bb679de7d7d.js" defer></script>
+  <script src="/_expo/static/js/web/entry-8030a5900b0eed8e33048f49d3d3e3c0.js" defer></script>
 </body>
 </html>
