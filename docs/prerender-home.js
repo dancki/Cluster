@@ -1,6 +1,6 @@
 (function () {
   var base = "";
-  var chunk = "/_expo/static/js/web/HomePageView-f142b63ea03bcd30349559c64cb8339e.js";
+  var chunk = "/_expo/static/js/web/HomePageView-a0895c3ea2536289123f9f210561db18.js";
   var root = document.documentElement;
   function homePath(pathname) {
     var p = pathname.indexOf(base) === 0 ? pathname.slice(base.length) : pathname;
